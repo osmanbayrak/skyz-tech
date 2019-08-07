@@ -1,0 +1,24 @@
+
+{
+    "translations": {
+        "en": "EN",
+        "tr": "TR",
+        "about": "ABOUT US",
+        "technologies": "TECHNOLOGIES",
+        "solutions": "SOLUTIONS",
+        "expertise": "EXPERTISE",
+        "career": "CAREER",
+        "contact": "CONTACT",
+        "wwa_h2_desc": "At Skyz we develop Visibility, Automation and Compliance technologies for large scale networks.",
+        "wwa_p_desc": "Skyz is part of Sekom Group wand also has a strategic partnership with Soitron, which has subsidiaries in seven European countries.",
+        "who_we_are": "WHO WE ARE",
+        "visibility_desc": "Today’s complex technology infrastructures often requires in depth expertise and advanced techniques to monitor and maintain",
+        "automation_desc": "Auto provisioning capabilities enable overcoming the challenges of complex and multi vendor infrastructres as well as benefiting from evolving Software Defined Technologies",
+        "compliance_desc": "In an interconnected world regulations are essential to secure networks and protect the rights of people",
+        "highlights": "HIGHLIGHTS",
+        "rd_focus": "R & D Focus",
+        "visibility": "VISIBILITY",
+        "automation": "AUTOMATION",
+        "compliance": "COMPLIANCE"
+    }
+}
