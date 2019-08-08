@@ -1,6 +1,6 @@
 @import url(./antd.css);
 .homeDiv {
-  margin-top: 96px; }
+  margin-top: 100px; }
   @media only screen and (min-width: 768px) {
     .homeDiv {
       margin-top: 60px; } }

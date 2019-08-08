@@ -6257,7 +6257,7 @@ span.ant-radio + * {
   z-index: 2;
   width: 0;
   height: 100%;
-  color: rgba(0, 0, 0, 0.45);
+  color: white;
   text-align: center;
   background-color: transparent;
   border: 0;
@@ -6280,10 +6280,11 @@ span.ant-radio + * {
 }
 .ant-tabs-tab-prev:hover,
 .ant-tabs-tab-next:hover {
-  color: rgba(0, 0, 0, 0.65);
+  color: white;
 }
 .ant-tabs-tab-prev-icon,
 .ant-tabs-tab-next-icon {
+    color: white;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -6299,6 +6300,7 @@ span.ant-radio + * {
 }
 .ant-tabs-tab-prev-icon-target,
 .ant-tabs-tab-next-icon-target {
+  color: white;
   display: block;
   display: inline-block;
   font-size: 12px;
@@ -6309,6 +6311,7 @@ span.ant-radio + * {
 }
 :root .ant-tabs-tab-prev-icon-target,
 :root .ant-tabs-tab-next-icon-target {
+    color: white;
   font-size: 12px;
 }
 .ant-tabs-tab-btn-disabled {

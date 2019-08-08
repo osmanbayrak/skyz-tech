@@ -59,7 +59,7 @@ class GlobalLayout extends React.Component {
             <Row>
               <Col md={6} xs={8}><div style={{textAlign: 'left'}}> <img src={logo} className="logoImg" /></div></Col>
               <Col md={18} xs={16}>
-                <Menu className="headerUl" mode="horizontal" defaultSelectedKeys={path == '/home' ? ['1'] : (path == '/technologies' ? ['2'] : (path == '/solutions' ? ['3'] : (path == '/expertise' ? ['4'] : (path == '/career' ? ['5'] : (path == '/contact' ? ['6'] : ['1'])))))}>
+                <Menu className="headerUl" mode="horizontal" defaultSelectedKeys={path == '/home' ? ['1'] : (path == '/technologies' ? ['2'] : (path == '/solutions' ? ['3'] : (path == '/expertise' ? ['4'] : (path == '/career' ? ['5'] : (path == '/contact' ? ['6'] : ['1'])))))} style={{lineHeight: '93px'}}>
                   <Menu.Item key="1"><Link to="/home">{i18n.t('about')}</Link></Menu.Item>
                   <Menu.Item key="2"><Link to="/technologies">{i18n.t('technologies')}</Link></Menu.Item>
                   <Menu.Item key="3"><Link to="/solutions">{i18n.t('solutions')}</Link></Menu.Item>
