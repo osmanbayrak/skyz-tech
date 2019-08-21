@@ -36,7 +36,7 @@
   text-align: center; }
 
 .logoImg {
-  height: 90px; }
+  height: 65px; }
   @media only screen and (max-width: 690px) {
     .logoImg {
       height: 30px; } }
@@ -58,7 +58,10 @@
   z-index: 3;
   width: 100%;
   text-align: center;
-  height: 95px; }
+  height: 123px;
+  -webkit-box-shadow: -2px 6px 55px 30px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 6px 55px 30px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 6px 55px 30px rgba(0, 0, 0, 0.75); }
   @media only screen and (max-width: 690px) {
     .headerBar {
       background: #fff;
@@ -71,7 +74,7 @@
       font-size: 12px; } }
 
 .responsive-content {
-  background: aliceblue; }
+  background: #fff; }
   @media only screen and (max-width: 690px) {
     .responsive-content {
       margin: 4px;
@@ -88,7 +91,7 @@
     padding: 0; } }
 
 .content__header {
-  background: aliceblue; }
+  background: #fff; }
 
 .content__table {
   padding: 15px; }

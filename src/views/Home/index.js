@@ -25,38 +25,33 @@ class HomePage extends React.Component {
             <img src={banner3} style={{ width: '100%', height: 'auto' }} />
           </div>
         </Carousel>
-        <h1 className="wwa_header">{i18n.t('who_we_are')}</h1>
-        <div className="blockFullWidth">
-          <Row className="contentBlock">
-            <h2 style={{color: 'white'}}>{i18n.t('wwa_h2_desc')}</h2>
-            <p>{i18n.t('wwa_p_desc')}</p>
-          </Row>
-        </div>
-        <div>
-          <Row className="contentBlock">
-            <h1 className="highlightsHeader">{i18n.t('highlights')}</h1>
-            <Col md={6} style={{cursor: 'pointer'}}>
-              <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('rd_focus')}</h3>} cover={<img className="cardImageCover" alt="example" src={rdFocusImg} />}>
-                a certified R&D center by the Ministry of Industry and Technology since 2017
-              </Card>
-            </Col>
-            <Col md={6} style={{cursor: 'pointer'}}>
-              <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('visibility')}</h3>} cover={<img className="cardImageCover" alt="example" src={visibilityImg} />}>
-                Lorem ipsum elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien
-              </Card>
-            </Col>
-            <Col md={6} style={{cursor: 'pointer'}}>
-              <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('automation')}</h3>} cover={<img className="cardImageCover" alt="example" src={automationImg} />}>
-                Lorem ipsum elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien
-              </Card>
-            </Col>
-            <Col md={6} style={{cursor: 'pointer'}}>
-              <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('compliance')}</h3>} cover={<img className="cardImageCover" alt="example" src={complianceImg} />}>
-                Lorem ipsum elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien
-              </Card>
-            </Col>
-          </Row>
-        </div>
+        <Row style={{marginTop: '50px', marginBottom: '60px'}} className="contentBlock">
+          <h1 style={{fontSize: '30px'}}>{i18n.t('wwa_h2_desc')}</h1>
+          <h3>{i18n.t('wwa_p_desc')}</h3>
+        </Row>
+        <Row className="contentBlock">
+          <h1 style={{marginBottom: '35px'}} className="highlightsHeader">{i18n.t('highlights')}</h1>
+          <Col lg={6} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" style={{ fontSize: '20px', background: '#cbf0f7', paddingLeft: '0px', paddingRight: '0px', borderRadius: '5px'}} bodyStyle={{height: '160px', minHeight: '160px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden'}}><img className="cardImageCover" alt="example" src={rdFocusImg} /></span>}>
+              R&D Focus:  a certified R&D center by the Ministry of Industry and Technology since 2017
+            </Card>
+          </Col>
+          <Col lg={6} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" style={{ fontSize: '20px', background: '#cbf0f7', paddingLeft: '0px', paddingRight: '0px', borderRadius: '5px'}} bodyStyle={{height: '160px', minHeight: '160px', overflow: 'hidden'}} cover={<span style={{overflow: 'hidden'}}><img className="cardImageCover" alt="example" src={visibilityImg} /></span>}>
+              Scalable Solutions: Proven solutions with integration capabilities for multi vendor networks
+            </Card>
+          </Col>
+          <Col lg={6} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" style={{ fontSize: '20px', background: '#cbf0f7', paddingLeft: '0px', paddingRight: '0px', borderRadius: '5px'}} bodyStyle={{height: '160px', minHeight: '160px', overflow: 'hidden'}} cover={<span style={{overflow: 'hidden'}}><img className="cardImageCover" alt="example" src={automationImg} /></span>}>
+              Cutting Edge Technologies in Visibility, Automation and Compliance areas
+            </Card>
+          </Col>
+          <Col lg={6} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" style={{ fontSize: '20px', background: '#cbf0f7', paddingLeft: '0px', paddingRight: '0px', borderRadius: '5px'}} bodyStyle={{height: '160px', minHeight: '160px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden'}}><img className="cardImageCover" alt="example" src={complianceImg} /></span>}>
+              Expertise on maintaining large scale networks, Big Data technologies and scalable packet level data handling 
+            </Card>
+          </Col>
+        </Row>
       </div>
       
     );
