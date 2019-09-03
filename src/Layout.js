@@ -82,7 +82,6 @@ class GlobalLayout extends React.Component {
           <Content className="responsive-content">
             {this.props.children}
           </Content>
-          <Divider style={{ marginTop: '100px', marginBottom: '2px' }} />
           <Footer style={{textAlign: 'center', backgroundColor: '#333333'}}>
             <Fragment>
               <Row gutter={24} style={{color: '#fff'}}>

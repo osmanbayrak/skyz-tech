@@ -1,68 +1,71 @@
 import './index.css';
 import React from 'react';
 import i18n from '../../i18n';
-import { Carousel, Row, Col, Card, Divider, Tabs } from 'antd';
-import banner1 from '../../assets/banner1.png';
-import banner2 from '../../assets/banner2.png';
-import banner3 from '../../assets/banner3.png';
-
-const { TabPane } = Tabs;
+import { Carousel, Row, Col, Card, Divider, Tabs, Icon } from 'antd';
+import banner1 from '../../assets/homepage_zeminsiz.png';
 
 class Solutions extends React.Component {
-  changeTab = (e) => {
-    console.log(e)
-  }
   render() {
     return (
-      <div id="home" style={{marginTop: '100px'}}>
-        <Carousel autoplay draggable={true}>
-          <div>
-            <img src={banner1} style={{ width: '100%', height: 'auto' }} />
-          </div>
-          <div>
-            <img src={banner2} style={{ width: '100%', height: 'auto' }} />
-          </div>
-          <div>
-            <img src={banner3} style={{ width: '100%', height: 'auto' }} />
-          </div>
-        </Carousel>
+      <div id="home" className="homeDiv">
+        <div className="bannerDiv">
+          <img src={banner1} style={{ width: '100%', height: 'auto' }} />
+        </div>
         <Row className="contentBlock">
-          <h1 className="wwa_header">{i18n.t('solutions')}</h1>
-          <div className="blockFullWidth">
-            <Row>
-              <h2 className="mainDesc">{i18n.t('solutions_desc')}</h2>
-            </Row>
-          </div>
+          <h1 style={{marginBottom: '35px'}} className="highlightsHeader">{i18n.t('solutions')}</h1>
+          <Divider style={{width: '30%', minWidth: '10px', marginLeft: '35%', background: '#9A3324', height: '2px'}} />
           <Col md={8} >
-            <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('monitoring_management')}</h3>}>
-              Monitoring and management of multi-vendor, multi-technology infrastructures
+            <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
+              <div className="overlayDiv">
+                <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="share-alt" /></div>
+                <div style={{fontSize: '20px', marginTop: '20px', marginBottom: '15px'}}>Network Visibility Suite</div>
+                <div>Integrated Network Discovery, Performance Monitoring, Fault Management and Log Management Solutions</div>
+              </div>
             </Card>
           </Col>
           <Col md={8} >
-            <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Life Cycle Management')}</h3>} >
-              Infrastructure life-cycle management
+            <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
+              <div className="overlayDiv">
+                <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="wifi" /></div>
+                <div style={{fontSize: '20px', marginTop: '20px', marginBottom: '15px'}}>IPAM</div>
+                <div style={{fontSize: '18px'}}>Carrier Grade IP Address Management solution providing Live IP inventory</div>
+              </div>
             </Card>
           </Col>
           <Col md={8} >
-            <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Capacity & Usage')}</h3>}>
-              Monitor availability and capacity usage on ports
-            </Card>
-          </Col>
-        </Row>
-        <Row className="contentBlock">
-          <Col md={8} >
-            <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('monitoring_management')}</h3>}>
-              Monitoring and management of multi-vendor, multi-technology infrastructures
+            <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
+              <div className="overlayDiv">
+                <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="cluster" /></div>
+                <div style={{fontSize: '20px', marginTop: '20px', marginBottom: '15px'}}>Discovery & Inventory</div>
+                <div style={{fontSize: '18px'}}>A comprehensive Discovery, Network Resource Inventory and Reconciliation Solution for Telco Networks</div>
+              </div>
             </Card>
           </Col>
           <Col md={8} >
-            <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Life Cycle Management')}</h3>} >
-              Infrastructure life-cycle management
+            <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
+              <div className="overlayDiv">
+                <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="control" /></div>
+                <div style={{fontSize: '20px', marginTop: '20px', marginBottom: '15px'}}>Peta Scale Logger</div>
+                <div style={{fontSize: '18px'}}>Regulatory traffic flow logging at Petabyte Scale</div>
+              </div>
             </Card>
           </Col>
           <Col md={8} >
-            <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Capacity & Usage')}</h3>}>
-              Monitor availability and capacity usage on ports
+            <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
+              <div className="overlayDiv">
+                <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="global" /></div>
+                <div style={{fontSize: '20px', marginTop: '20px', marginBottom: '15px'}}>LOTT IoT Platform</div>
+                <div style={{fontSize: '18px'}}>Multi Tenant platform for collecting, processing and visualization of vast amounts of data from multi vendor sensors.</div>
+              </div>
+            </Card>
+          </Col>
+          <Col md={8} >
+            <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
+              <div className="overlayDiv">
+                <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="usergroup-add" /></div>
+                <div style={{fontSize: '20px', marginTop: '20px', marginBottom: '15px'}}>Broadband Customer Experience Management</div>
+                <div style={{fontSize: '18px'}}>Our Big Data solution for consolidating and analyzing business critical information from different information sources on the broadband access network </div>
+              </div>
             </Card>
           </Col>
         </Row>

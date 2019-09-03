@@ -1,120 +1,56 @@
 import './index.css';
 import React from 'react';
 import i18n from '../../i18n';
-import { Carousel, Row, Col, Card, Divider, Tabs } from 'antd';
-import banner1 from '../../assets/banner1.png';
-import banner2 from '../../assets/banner2.png';
-import banner3 from '../../assets/banner3.png';
-
-const { TabPane } = Tabs;
+import { Carousel, Row, Col, Card, Tag, Divider, Icon } from 'antd';
+import rdFocusImg from '../../assets/rdFocusImg.png';
+import visibilityImg from '../../assets/visibilityImg.jpg';
+import automationImg from '../../assets/automationImg.jpg';
+import banner1 from '../../assets/technology_zeminsiz.png';
 
 class Technologies extends React.Component {
-  changeTab = (e) => {
-    console.log(e)
-  }
   render() {
     return (
-      <div id="home" style={{marginTop: '100px'}}>
-        <Carousel autoplay draggable={true}>
-          <div>
-            <img src={banner1} style={{ width: '100%', height: 'auto' }} />
-          </div>
-          <div>
-            <img src={banner2} style={{ width: '100%', height: 'auto' }} />
-          </div>
-          <div>
-            <img src={banner3} style={{ width: '100%', height: 'auto' }} />
-          </div>
-        </Carousel>
-        <Tabs className="tabsMain" tabBarStyle={{background: '#333', color: 'white', height: '100px'}} defaultActiveKey="1" onChange={this.changeTab}>
-          <TabPane tab={<div className="tabPaneTitle">{i18n.t('visibility')}</div>} key="1">
-            <Row className="contentBlock">
-              <h1 className="wwa_header">{i18n.t('visibility')}</h1>
-              <div className="blockFullWidth">
-                <Row>
-                  <h2 className="mainDesc">{i18n.t('visibility_desc')}</h2>
-                </Row>
-              </div>
-              <Col md={6} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('monitoring_management')}</h3>}>
-                  Monitoring and management of multi-vendor, multi-technology infrastructures
-                </Card>
-              </Col>
-              <Col md={6} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Life Cycle Management')}</h3>} >
-                  Infrastructure life-cycle management
-                </Card>
-              </Col>
-              <Col md={6} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Capacity & Usage')}</h3>}>
-                  Monitor availability and capacity usage on ports
-                </Card>
-              </Col>
-              <Col md={6} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Discovery & Reconciliation')}</h3>}>
-                  Physical and Logical Network Resource Discovery and Reconciliation
-                </Card>
-              </Col>
-            </Row>
-          </TabPane>
-          <TabPane className="tabsMain" tab={<div className="tabPaneTitle">{i18n.t('automation')}</div>} key="2">
-              <Row className="contentBlock">
-                <h1 className="wwa_header">{i18n.t('automation')}</h1>
-                <div className="blockFullWidth">
-                  <Row>
-                    <h2 className="mainDesc">{i18n.t('automation_desc')}</h2>
-                  </Row>
-                </div>
-                <Col md={6} >
-                  <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Regulatory Reporting')}</h3>}>
-                    Flexible and extensive regulatory reporting capabilities
-                  </Card>
-                </Col>
-                <Col md={6} >
-                  <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Data Storage')}</h3>}>
-                    Ability to collect and store flow data (IPFIX) at a scalable level
-                  </Card>
-                </Col>
-                <Col md={6} >
-                  <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Usage')}</h3>}>
-                    Satisfy regulations related to network resource usage
-                  </Card>
-                </Col>
-                <Col md={6} >
-                  <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Data Collection')}</h3>}>
-                    Scalable, scheduled, distributed data collection
-                  </Card>
-                </Col>
-              </Row>
-          </TabPane>
-          <TabPane  tab={<div className="tabPaneTitle">{i18n.t('compliance')}</div>} key="3">
-            <Row className="contentBlock">
-              <h1 className="wwa_header">{i18n.t('compliance')}</h1>
-              <div className="blockFullWidth">
-                <Row>
-                  <h2 className="mainDesc">{i18n.t('compliance_desc')}</h2>
-                </Row>
-              </div>
-              <Col md={8} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Configuration Management')}</h3>}>
-                  Automatic backup and recovery of infrastructure configuration
-                </Card>
-              </Col>
-              <Col md={8} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Provisioning')}</h3>}>
-                  Provide automatic configuration of infrastructure in accordance to customer needs
-                </Card>
-              </Col>
-              <Col md={8} >
-                <Card style={{overflow: 'hidden'}} bodyStyle={{minHeight: '140px'}} title={<h3 style={{marginBottom: '15px'}}>{i18n.t('Fault management')}</h3>}>
-                  Respond to alarming situations with automated actions
-                </Card>
-              </Col>
-            </Row>
-          </TabPane>
-        </Tabs>
-      </div>
-      
+      <div id="home" className="homeDiv">
+        <div className="bannerDiv">
+          <img src={banner1} style={{ width: '100%', height: 'auto' }} />
+        </div>
+        <Row className="contentBlock">
+          <h1 style={{marginBottom: '35px'}} className="highlightsHeader">{i18n.t('technologies')}</h1>
+          <Divider style={{width: '30%', minWidth: '10px', marginLeft: '35%', background: '#9A3324', height: '2px'}} />
+          <Col lg={8} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px'}}><img className="techCardsCover" alt="example" src={rdFocusImg} /></span>}>
+              <p style={{textAlign: 'left', fontSize: '18px'}}>Complex networks with ten thousands of nodes requre scalable visibility tools. Skyz provides stable, proven, multi vendor visibility solutions.</p>
+              <ul style={{fontSize: '16px', marginTop: '15px', listStyle: 'none', textAlign: 'left', lineHeight: '2.4'}}>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Infrastructure life-cycle management</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Monitor availability and capacity usage on ports</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Monitoring and management of multi-vendor, infrastructures</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Physical and Logical Network Resource Discovery and Reconciliation</li>
+              </ul>
+            </Card>
+          </Col>
+          <Col lg={8} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px'}}><img className="techCardsCover" alt="example" src={visibilityImg} /></span>}>
+              <p style={{textAlign: 'left', fontSize: '18px'}}>Auto provisioning capabilities integrated with business support systems (such as order management), reduce the risks and overheads caused by manual operations.Skyz automation technologies enable easier management of complex and multi vendor networks, as well as benefiting from evolving Software Defined Technologies</p>
+              <ul style={{fontSize: '16px', marginTop: '15px', listStyle: 'none', textAlign: 'left', lineHeight: '2.4'}}>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Scalable, scheduled, distributed data collection</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Satisfy regulations related to network resource usage</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Flexible and extensive regulatory reporting capabilities</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Ability to collect and store flow data (IPFIX) at a scalable level</li>
+              </ul>
+            </Card>
+          </Col>
+          <Col lg={8} style={{cursor: 'pointer'}}>
+            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px'}}><img className="techCardsCover" alt="example" src={automationImg} /></span>}>
+              <p style={{textAlign: 'left', fontSize: '18px'}}>In today's business environment following diverse and complex regulations is becoming increasingly  important for the success of a company.  Our compliance technologies will help you to stay on the right side of the regulations</p>
+              <ul style={{fontSize: '16px', marginTop: '15px', listStyle: 'none', textAlign: 'left', lineHeight: '2.4'}}>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Respond to alarming situations with automated actions</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Automatic backup and recovery of infrastructure configuration</li>
+                <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Provide automatic configuration of infrastructure in accordance to customer needs</li>
+              </ul>
+            </Card>
+          </Col>
+        </Row>
+      </div> 
     );
   }
 }

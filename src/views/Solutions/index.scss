@@ -72,10 +72,22 @@
     }
 }
 
+.overlayDiv {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #d66060;
+    z-index: 2;
+    color: #fff;
+    border-radius: 25px;
+}
+
 .contentBlock {
     text-align: center;
-    margin-right: 17%;
-    margin-left: 17%;
+    margin-right: 15%;
+    margin-left: 15%;
     color: white;
     @media only screen and (max-width: 600px) {
         margin-top: 3%;
@@ -109,5 +121,6 @@
 .cardImageCover {
     overflow: hidden;
     height: 230px;
+    border-radius: 25px;
 }
  
