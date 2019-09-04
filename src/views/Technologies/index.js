@@ -12,13 +12,15 @@ class Technologies extends React.Component {
     return (
       <div id="home" className="homeDiv">
         <div className="bannerDiv">
-          <img src={banner1} style={{ width: '100%', height: 'auto' }} />
+          <img src={banner1} className="bannerImage" />
         </div>
         <Row className="contentBlock">
-          <h1 style={{marginBottom: '35px'}} className="highlightsHeader">{i18n.t('technologies')}</h1>
-          <Divider style={{width: '30%', minWidth: '10px', marginLeft: '35%', background: '#9A3324', height: '2px'}} />
+          <Col className="titleCol">
+            <span className="highlightsHeader">{i18n.t('technologies')}</span>
+          </Col>
           <Col lg={8} style={{cursor: 'pointer'}}>
-            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px'}}><img className="techCardsCover" alt="example" src={rdFocusImg} /></span>}>
+            <div style={{textAlign: 'center', color: '#9A3324', fontSize: '26px', fontWeight: 'bolder', marginBottom: '10px'}}>Visibility</div>
+            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px' , borderBottomLeftRadius: '0', borderBottomRightRadius: '0'}}><img className="techCardsCover" alt="example" src={rdFocusImg} /></span>}>
               <p style={{textAlign: 'left', fontSize: '18px'}}>Complex networks with ten thousands of nodes requre scalable visibility tools. Skyz provides stable, proven, multi vendor visibility solutions.</p>
               <ul style={{fontSize: '16px', marginTop: '15px', listStyle: 'none', textAlign: 'left', lineHeight: '2.4'}}>
                 <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Infrastructure life-cycle management</li>
@@ -29,7 +31,8 @@ class Technologies extends React.Component {
             </Card>
           </Col>
           <Col lg={8} style={{cursor: 'pointer'}}>
-            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px'}}><img className="techCardsCover" alt="example" src={visibilityImg} /></span>}>
+            <div style={{textAlign: 'center', color: '#9A3324', fontSize: '26px', fontWeight: 'bolder', marginBottom: '10px'}}>Automation</div>
+            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px' , borderBottomLeftRadius: '0', borderBottomRightRadius: '0'}}><img className="techCardsCover" alt="example" src={visibilityImg} /></span>}>
               <p style={{textAlign: 'left', fontSize: '18px'}}>Auto provisioning capabilities integrated with business support systems (such as order management), reduce the risks and overheads caused by manual operations.Skyz automation technologies enable easier management of complex and multi vendor networks, as well as benefiting from evolving Software Defined Technologies</p>
               <ul style={{fontSize: '16px', marginTop: '15px', listStyle: 'none', textAlign: 'left', lineHeight: '2.4'}}>
                 <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Scalable, scheduled, distributed data collection</li>
@@ -40,7 +43,8 @@ class Technologies extends React.Component {
             </Card>
           </Col>
           <Col lg={8} style={{cursor: 'pointer'}}>
-            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px'}}><img className="techCardsCover" alt="example" src={automationImg} /></span>}>
+            <div style={{textAlign: 'center', color: '#9A3324', fontSize: '26px', fontWeight: 'bolder', marginBottom: '10px'}}>Compliance</div>
+            <Card className="homeCard" bodyStyle={{height: '340px', minHeight: '340px', overflow: 'scroll'}} cover={<span style={{overflow: 'hidden', borderRadius: '25px' , borderBottomLeftRadius: '0', borderBottomRightRadius: '0'}}><img className="techCardsCover" alt="example" src={automationImg} /></span>}>
               <p style={{textAlign: 'left', fontSize: '18px'}}>In today's business environment following diverse and complex regulations is becoming increasingly  important for the success of a company.  Our compliance technologies will help you to stay on the right side of the regulations</p>
               <ul style={{fontSize: '16px', marginTop: '15px', listStyle: 'none', textAlign: 'left', lineHeight: '2.4'}}>
                 <li><Icon style={{fontSize: '20px', marginRight: '10px'}} type="check-circle" theme="twoTone" />Respond to alarming situations with automated actions</li>

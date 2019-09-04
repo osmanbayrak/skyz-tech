@@ -1,10 +1,9 @@
-import './index.css';
 import React from 'react';
 import i18n from '../../i18n';
 import { Carousel, Row, Col, Card, Divider, Tabs, Icon } from 'antd';
-import banner1 from '../../assets/homepage_zeminsiz.png';
+import banner1 from '../../assets/Expertise_zeminsiz.png';
 
-class Solutions extends React.Component {
+class Expertise extends React.Component {
   render() {
     return (
       <div id="home" className="homeDiv">
@@ -13,7 +12,7 @@ class Solutions extends React.Component {
         </div>
         <Row className="contentBlock">
           <Col className="titleCol">
-            <span className="highlightsHeader">{i18n.t('solutions')}</span>
+            <span className="highlightsHeader">{i18n.t('expertise')}</span>
           </Col>
           <Col md={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
@@ -75,4 +74,4 @@ class Solutions extends React.Component {
   }
 }
 
-export default Solutions;
+export default Expertise;
