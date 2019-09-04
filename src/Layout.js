@@ -61,7 +61,7 @@ class GlobalLayout extends React.Component {
             <Row className="contentBlock" style={{marginLeft: '0', marginRight: '0', paddingRight: '15%', paddingLeft: '15%', background: 'transparent'}}>
               <Col className="logoDiv"><img src={logo} className="logoImg" /></Col>
               <Col>
-                <Menu className="headerUl" mode="horizontal" defaultSelectedKeys={path == '/home' ? ['1'] : (path == '/technologies' ? ['2'] : (path == '/solutions' ? ['3'] : (path == '/expertise' ? ['4'] : (path == '/career' ? ['5'] : (path == '/contact' ? ['6'] : ['1'])))))} style={{lineHeight: '45px', float: 'left', background: 'transparent', color: 'white', marginLeft: '25px'}}>
+                <Menu className="headerUl" mode="horizontal" defaultSelectedKeys={path == '/home' ? ['1'] : (path == '/technologies' ? ['2'] : (path == '/solutions' ? ['3'] : (path == '/expertise' ? ['4'] : (path == '/career' ? ['5'] : (path == '/contact' ? ['6'] : ['1'])))))} style={{lineHeight: '45px', float: 'left', background: 'transparent', color: 'white', marginLeft: '25px', marginTop: '10px', borderBottom: 'none'}}>
                   <Menu.Item key="1"><Link style={{color: 'white'}} to="/home" >{i18n.t('about')}</Link></Menu.Item>
                   <Menu.Item key="2"><Link style={{color: 'white'}} to="/technologies" >{i18n.t('technologies')}</Link></Menu.Item>
                   <Menu.Item key="3"><Link style={{color: 'white'}} to="/solutions" >{i18n.t('solutions')}</Link></Menu.Item>
@@ -73,8 +73,8 @@ class GlobalLayout extends React.Component {
               <Col style={{float: 'right'}}>
                 <div className="memberOfDiv">
                   <div style={{ marginTop: '-10px'}}>
-                    <a style={{color: 'white', marginRight: '10px', fontSize: '18px', fontWeight: '700', fontFamily: 'Source Sans Pro", "sans-serif'}}>MEMBER OF</a>
-                    <img style={{marginBottom: '10px', filter: 'brightness(10)'}} src={memberOf} />
+                    <a style={{color: 'white', marginRight: '8px', fontSize: '15px', fontWeight: '700', fontFamily: 'Source Sans Pro", "sans-serif'}}>MEMBER OF</a>
+                    <img style={{marginBottom: '7px', filter: 'brightness(10)'}} src={memberOf} />
                   </div>
                 </div>
               </Col>
@@ -84,7 +84,7 @@ class GlobalLayout extends React.Component {
           <Content className="responsive-content">
             {this.props.children}
           </Content>
-          <div style={{height: '100px', background: 'whitesmoke'}}></div>
+          <div style={{height: '100px', background: '#D5DBDF'}}></div>
           <Footer style={{textAlign: 'center', backgroundColor: '#333333'}}>
             <Fragment>
               <Row gutter={24} style={{color: '#fff'}}>
