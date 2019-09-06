@@ -2,20 +2,19 @@ import './index.css';
 import React from 'react';
 import i18n from '../../i18n';
 import { Carousel, Row, Col, Card, Divider, Tabs, Icon } from 'antd';
-import banner1 from '../../assets/homepage_zeminsiz.png';
-
 class Solutions extends React.Component {
   render() {
     return (
-      <div id="home" className="homeDiv">
-        <div className="bannerDiv">
-          <img src={banner1} className="bannerImage" />
-        </div>
-        <Row className="contentBlock">
-          <Col className="titleCol">
+      <div id="solutions" className="homeDiv">
+        <Row className="titleRow" style={{ marginBottom: '45px'}}> 
+          <Col span={10} className="titleRowDivider"></Col>
+          <Col span={4} className="titleMiddleDiv">
             <span className="highlightsHeader">{i18n.t('solutions')}</span>
           </Col>
-          <Col md={8} >
+          <Col span={10} className="titleRowDivider"></Col>
+        </Row>
+        <Row className="contentBlock">
+          <Col lg={12} xl={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
               <div className="overlayDiv">
                 <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="share-alt" /></div>
@@ -24,7 +23,7 @@ class Solutions extends React.Component {
               </div>
             </Card>
           </Col>
-          <Col md={8} >
+          <Col lg={12} xl={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
               <div className="overlayDiv">
                 <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="wifi" /></div>
@@ -33,7 +32,7 @@ class Solutions extends React.Component {
               </div>
             </Card>
           </Col>
-          <Col md={8} >
+          <Col lg={12} xl={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
               <div className="overlayDiv">
                 <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="cluster" /></div>
@@ -42,7 +41,7 @@ class Solutions extends React.Component {
               </div>
             </Card>
           </Col>
-          <Col md={8} >
+          <Col lg={12} xl={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
               <div className="overlayDiv">
                 <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="control" /></div>
@@ -51,7 +50,7 @@ class Solutions extends React.Component {
               </div>
             </Card>
           </Col>
-          <Col md={8} >
+          <Col lg={12} xl={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
               <div className="overlayDiv">
                 <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="global" /></div>
@@ -60,7 +59,7 @@ class Solutions extends React.Component {
               </div>
             </Card>
           </Col>
-          <Col md={8} >
+          <Col lg={12} xl={8} >
             <Card className="homeCard" bodyStyle={{minHeight: '280px'}}>
               <div className="overlayDiv">
                 <div style={{marginTop: '30px'}}><Icon style={{fontSize: '70px'}} type="usergroup-add" /></div>

@@ -1,25 +1,25 @@
-import { Layout, Menu, Icon, Divider, Drawer, Row, Col, Input } from 'antd';
+import { Layout, Menu, Divider, Row, Col } from 'antd';
 import React, { Fragment } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link, animateScroll as scroll } from "react-scroll";
 import { isMobile } from 'react-device-detect';
 import i18n from './i18n';
 import global from './global';
 import './layout.css';
-import logo from './assets/skyz white.png';
+import logo from './assets/skyz colorful.png';
 import memberOf from './assets/soitron-group.png';
-import { GlobalFooter } from 'sky-react-components';
+import Home from './views/Home';
+import Technologies from './views/Technologies';
+import Solutions from './views/Solutions';
+import Expertise from './views/Expertise';
+import Career from './views/Career';
 
-const { Header, Sider, Content, Footer } = Layout;
-const SubMenu = Menu.SubMenu;
-const { Search } = Input;
+const { Header, Content, Footer } = Layout;
 
 class GlobalLayout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       collapsed: true,
-      baseMenu: [],
-      rootMenu: [],
       user: {},
       windowHeight: window.innerHeight,
       visible: false,
@@ -53,28 +53,54 @@ class GlobalLayout extends React.Component {
   };
 
   render() {
-    const { baseMenu, rootMenu, scrollPos } = this.state;
+    const { scrollPos } = this.state;
     const path = window.location.pathname;
     return (
       <Layout onScroll={this.checkScroll} id="layout" style={{ minHeight: this.state.windowHeight, zIndex: 3 }}>
-          <Header className="headerBar">
+          <Header className="headerBar" style={scrollPos > 100 ? {background: 'rgba(0,0,0,0.82)', boxShadow: '0px 2px 12px 1px rgba(0, 0, 0, 0.9)'} : undefined}>
             <Row className="contentBlock" style={{marginLeft: '0', marginRight: '0', paddingRight: '15%', paddingLeft: '15%', background: 'transparent'}}>
-              <Col className="logoDiv"><img src={logo} className="logoImg" /></Col>
+              <Link style={{color: 'white'}} activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration= {500}>
+                <Col className="logoDiv"><img style={scrollPos > 100 ? {filter: 'brightness(10)'} : undefined} src={logo} className="logoImg" /></Col>
+              </Link>
               <Col>
                 <Menu className="headerUl" mode="horizontal" defaultSelectedKeys={path == '/home' ? ['1'] : (path == '/technologies' ? ['2'] : (path == '/solutions' ? ['3'] : (path == '/expertise' ? ['4'] : (path == '/career' ? ['5'] : (path == '/contact' ? ['6'] : ['1'])))))} style={{lineHeight: '45px', float: 'left', background: 'transparent', color: 'white', marginLeft: '25px', marginTop: '10px', borderBottom: 'none'}}>
-                  <Menu.Item key="1"><Link style={{color: 'white'}} to="/home" >{i18n.t('about')}</Link></Menu.Item>
-                  <Menu.Item key="2"><Link style={{color: 'white'}} to="/technologies" >{i18n.t('technologies')}</Link></Menu.Item>
-                  <Menu.Item key="3"><Link style={{color: 'white'}} to="/solutions" >{i18n.t('solutions')}</Link></Menu.Item>
-                  <Menu.Item key="4"><Link style={{color: 'white'}} to="/expertise" >{i18n.t('expertise')}</Link></Menu.Item>
-                  <Menu.Item key="5"><Link style={{color: 'white'}} to="/career" >{i18n.t('career')}</Link></Menu.Item>
-                  <Menu.Item key="6"><Link style={{color: 'white'}} to="/contact" >{i18n.t('contact')}</Link></Menu.Item>
+                  <Menu.Item key="1">
+                    <Link style={{color: 'white'}} activeClass="active" to="home" spy={true} smooth={true} offset={-70} duration= {500}>
+                      {i18n.t('about')}
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="2">
+                    <Link style={{color: 'white'}} activeClass="active" to="tech" spy={true} smooth={true} offset={-70} duration= {500}>
+                      {i18n.t('technologies')}
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="3">
+                    <Link style={{color: 'white'}} activeClass="active" to="solutions" spy={true} smooth={true} offset={-70} duration= {500}>
+                      {i18n.t('solutions')}
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="4">
+                    <Link style={{color: 'white'}} activeClass="active" to="expertise" spy={true} smooth={true} offset={-70} duration= {500}>
+                      {i18n.t('expertise')}
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="5">
+                    <Link style={{color: 'white'}} activeClass="active" to="career" spy={true} smooth={true} offset={-70} duration= {500}>
+                      {i18n.t('career')}
+                    </Link>
+                  </Menu.Item>
+                  <Menu.Item key="6">
+                    <Link style={{color: 'white'}} activeClass="active" to="contact" spy={true} smooth={true} offset={-70} duration= {500}>
+                      {i18n.t('contact')}
+                    </Link>
+                  </Menu.Item>
                 </Menu>
               </Col>
               <Col style={{float: 'right'}}>
                 <div className="memberOfDiv">
                   <div style={{ marginTop: '-10px'}}>
-                    <a style={{color: 'white', marginRight: '8px', fontSize: '15px', fontWeight: '700', fontFamily: 'Source Sans Pro", "sans-serif'}}>MEMBER OF</a>
-                    <img style={{marginBottom: '7px', filter: 'brightness(10)'}} src={memberOf} />
+                    <a style={{color: 'white', marginRight: '8px', fontSize: '10px', fontWeight: '700', fontFamily: 'Source Sans Pro", "sans-serif'}}>MEMBER OF</a>
+                    <img style={{marginBottom: '7px'}} src={memberOf} />
                   </div>
                 </div>
               </Col>
@@ -82,9 +108,13 @@ class GlobalLayout extends React.Component {
           </Header>
           <Divider style={{ margin: '0' }} />
           <Content className="responsive-content">
-            {this.props.children}
+            <Home />
+            <Technologies />
+            <Solutions />
+            <Expertise />
+            <Career />
           </Content>
-          <div style={{height: '100px', background: '#D5DBDF'}}></div>
+          <div style={{height: '100px', background: '#CED5D8'}}></div>
           <Footer style={{textAlign: 'center', backgroundColor: '#333333'}}>
             <Fragment>
               <Row gutter={24} style={{color: '#fff'}}>

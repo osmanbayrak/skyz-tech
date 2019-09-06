@@ -62,8 +62,15 @@
 
 .logoDiv {
   float: left!important;
-  border-radius: 10px;
   height: 67px;
+  cursor: pointer;
+  // filter: brightness(10)
+}
+.logoDiv:hover {
+  float: left!important;
+  height: 67px;
+  cursor: pointer;
+  filter: brightness(110%)
 }
 
 .headerBar {
@@ -75,7 +82,7 @@
   z-index: 3;
   width: 100%;
   text-align: center;
-  height: 123px;
+  height: 75px;
   // -webkit-box-shadow: 0px 4px 12px 1px rgba(148, 50, 50, 0.72);
   // -moz-box-shadow: 0px 4px 12px 1px rgba(148, 50, 50, 0.72);
   // box-shadow: 0px 4px 12px 1px rgba(148, 50, 50, 0.72);
@@ -92,7 +99,7 @@
 }
 
 .responsive-content {
-    background: #fff;
+    background: #CED5D8;
     @media only screen and (max-width: 690px) {
         margin: 4px;
         padding: 5px;
@@ -169,7 +176,12 @@
 .bannerImage {
   width: 100%;
   height: auto;
-  margin-top: 170px;
+  margin-top: 180px;
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+  }
 }
 
 .homeDiv {
@@ -180,10 +192,78 @@
   background: #CED5D8;
 }
 
-.titleCol {
+.titleRow {
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 30px;
+  padding-top: 85px;
+  margin-bottom: -70px;
+  @media only screen and (max-width: 900px) {
+    text-align: center;
+    padding-top: 55px;
+    margin-bottom: -10px;
+  }
+}
+
+.subtitleRow {
+  text-align: center;
+  padding-top: 85px;
+  margin-bottom: 20px;
+  @media only screen and (max-width: 900px) {
+    text-align: center;
+    padding-top: 55px;
+    margin-bottom: 10px;
+  }
+}
+
+.titleMiddleDiv {
+  width: 16.6%;
+  @media only screen and (max-width: 1500px) {
+    width: 33.3%;
+  }
+}
+
+.subtitleMiddleDiv {
+  width: 30%;
+  @media only screen and (max-width: 1500px) {
+    width: 60%;
+  }
+}
+
+.titleRowDivider {
+  margin-top: 25px;
+  height: 1px;
+  background: black;
+  width: 41.666%;
+  @media only screen and (max-width: 1500px) {
+    margin-top: 25px;
+    height: 1px;
+    background: black;
+    width: 33.3%;
+  }
+  @media only screen and (max-width: 700px) {
+    margin-top: 25px;
+    height: 1px;
+    background: transparent;
+    width: 33.3%;
+  }
+}
+
+.subtitleRowDivider {
+  margin-top: 25px;
+  height: 1px;
+  background: black;
+  width: 35%;
+  @media only screen and (max-width: 1500px) {
+    margin-top: 25px;
+    height: 1px;
+    background: black;
+    width: 20%;
+  }
+  @media only screen and (max-width: 700px) {
+    margin-top: 25px;
+    height: 1px;
+    background: transparent;
+    width: 20%;
+  }
 }
 
 .bannerDiv {
@@ -191,6 +271,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin-top: -1px;
+}
+
+.doubleBannerDiv {
+  background: url(../src/assets/doubleBgSmall.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .mainDesc {
@@ -208,7 +296,7 @@
   box-shadow: 5px 5px 6px 1px rgba(52, 73, 94, 0.72);
   font-size: 20px!important;
   background-color: #c2b6b6!important;
-  background-image: linear-gradient( 135deg, #506374 10%, #34495E 100%)!important;
+  background-image: linear-gradient( 135deg, #5e768a 10%, #34495E 100%)!important;
   color: rgba(255, 255, 255, 0.75)!important;
   padding-left: 0px!important;
   padding-right: 0px!important;
@@ -229,6 +317,30 @@
   color: #06062e;
   font-weight: bold;
   font-size: 34px;
+  margin-top: 25px;
+}
+
+.subtitleDiv {
+  font-weight: bold;
+  margin-top: 25px;
+  text-align: center;
+  color: rgba(0,0,0, 0.7);
+  font-size: 1.2vw;
+  margin-bottom: 10px;
+  @media only screen and (max-width: 1000px) {
+    font-weight: bold;
+    margin-top: 25px;
+    text-align: center;
+    color: rgba(0,0,0, 0.7);
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+}
+
+.subtitleSpan {
+  color: rgba(0,0,0, 0.8);
+  font-weight: bold;
+  font-size: 28px;
   margin-top: 25px;
 }
 
