@@ -1,7 +1,7 @@
 import './index.css';
 import React from 'react';
 import i18n from '../../i18n';
-import { Carousel, Row, Col, Card, Divider, Tabs, Icon } from 'antd';
+import { Row, Col, Card, Icon } from 'antd';
 class Solutions extends React.Component {
   render() {
     return (
