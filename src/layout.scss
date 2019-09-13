@@ -75,6 +75,8 @@
 
 .headerBar {
   // background-image: linear-gradient( 135deg, #d66060 10%, #943232 100%)!important;
+  -webkit-transition: background 0.7s; /* For Safari 3.1 to 6.0 */
+  transition: background 0.7s;
   background: transparent;
   color: white;
   padding: 0;
@@ -294,6 +296,32 @@
   }
 }
 
+.stepsDiv {
+  margin-left: 10%;
+  width: 80%;
+  @media only screen and (max-width: 600px) {
+      margin-top: 3%;
+      margin-right: 5%;
+      margin-left: 5%;
+      width: 90%;
+      top: 10px;
+  }
+}
+
+.contentBlock {
+  text-align: center;
+  margin-right: 10%;
+  margin-left: 10%;
+  color: white;
+  @media only screen and (max-width: 600px) {
+      margin-top: 3%;
+      text-align: center;
+      margin-right: 10%;
+      margin-left: 10%;
+      top: 10px;
+  }
+}
+
 .homeCard {
   -webkit-box-shadow: 5px 5px 6px 1px rgba(52, 73, 94, 0.72);
   -moz-box-shadow: 5px 5px 6px 1px rgba(52, 73, 94, 0.72);
@@ -301,6 +329,20 @@
   font-size: 20px!important;
   background-color: #c2b6b6!important;
   background-image: linear-gradient( 135deg, #5e768a 10%, #34495E 100%)!important;
+  color: rgba(255, 255, 255, 0.75)!important;
+  padding-left: 0px!important;
+  padding-right: 0px!important;
+  border-radius: 35px!important;
+  border: none!important;
+}
+
+.redHomeCard {
+  -webkit-box-shadow: 5px 5px 6px 1px rgba(52, 73, 94, 0.72);
+  -moz-box-shadow: 5px 5px 6px 1px rgba(52, 73, 94, 0.72);
+  box-shadow: 5px 5px 6px 1px rgba(52, 73, 94, 0.72);
+  font-size: 20px!important;
+  background-color: #c2b6b6!important;
+  background-image: linear-gradient( 135deg, #b44b4b 10%, #852a2a 100%)!important;
   color: rgba(255, 255, 255, 0.75)!important;
   padding-left: 0px!important;
   padding-right: 0px!important;

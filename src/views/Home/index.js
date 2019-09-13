@@ -1,4 +1,3 @@
-import './index.css';
 import React from 'react';
 import i18n from '../../i18n';
 import { Carousel, Row, Col, Card, Divider } from 'antd';

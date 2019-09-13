@@ -46,12 +46,6 @@ class GlobalLayout extends React.Component {
     window.removeEventListener('resize', this.updateHeight);
   }
 
-  showDrawer = () => {
-    this.setState({
-      visible: true,
-    });
-  };
-
   render() {
     const { scrollPos } = this.state;
     const path = window.location.pathname;

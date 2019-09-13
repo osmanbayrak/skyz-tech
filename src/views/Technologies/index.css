@@ -70,19 +70,6 @@
       font-weight: bold;
       font-size: 22px; } }
 
-.contentBlock {
-  text-align: center;
-  margin-right: 10%;
-  margin-left: 10%;
-  color: white; }
-  @media only screen and (max-width: 600px) {
-    .contentBlock {
-      margin-top: 3%;
-      text-align: center;
-      margin-right: 10%;
-      margin-left: 10%;
-      top: 10px; } }
-
 .blockFullWidth {
   background: #3A5DAE;
   height: 150px;
