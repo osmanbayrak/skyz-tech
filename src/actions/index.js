@@ -1,12 +1,7 @@
 import axios from 'axios';
 import global from '../global';
 import message from 'antd/lib/message';
-import {
-  UPDATE_DATA,
-  GET_DATA,
-  DELETE_DATA,
-  ADD_DATA,
-} from './actionTypes';
+import { UPDATE_DATA, GET_DATA, DELETE_DATA, ADD_DATA } from './actionTypes';
 import i18n from '../i18n';
 
 export function updateData(id, filter) {

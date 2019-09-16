@@ -19,5 +19,5 @@ module.exports = {
         description: i18n.t('error_occured'),
       });
     }
-  }
+  },
 };

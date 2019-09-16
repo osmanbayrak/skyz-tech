@@ -1,9 +1,4 @@
-import {
-  GET_DATA,
-  UPDATE_DATA,
-  DELETE_DATA,
-  ADD_DATA,
-} from '../actions/actionTypes';
+import { GET_DATA, UPDATE_DATA, DELETE_DATA, ADD_DATA } from '../actions/actionTypes';
 
 const initialDatas = {
   data: [],

@@ -3,7 +3,7 @@ import i18n from '../../i18n';
 import { Row, Col, Card, Icon } from 'antd';
 import banner1 from '../../assets/Expertise_zeminsiz.png';
 
-class Expertise extends React.Component {
+class Gp extends React.Component {
   render() {
     return (
       <div id="expertise" className="homeDiv">
@@ -100,4 +100,4 @@ class Expertise extends React.Component {
   }
 }
 
-export default Expertise;
+export default Gp;
